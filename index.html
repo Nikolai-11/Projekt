@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастерская кованых изделий "Стальной Век"</title>
+</head>
+<body>
+    <!-- Шапка сайта -->   
+    <header>
+        <!-- Логотип -->
+        <div>
+            <a href="/">Стальной Век</a>
+            <img src="images/logo.jpg" alt="логотип" width="100" height="100">
+        </div>
+
+        <!-- Поиск -->
+        <div class="search-box">
+            <form id="search-form">
+                <input type="search" placeholder="Поиск изделий..." id="search-input">
+                <button type="submit">Найти</button>
+            </form>
+        </div>
+
+        <!-- Навигация -->
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#about">О мастерской</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <button type="button" id="cart-button">
+            <img src="images/i.webp" alt="Корзина" width="16" height="16">
+            <span>Корзина (<span id="cart-count">0</span>)</span>
+        </button>        
+    </header>
+
+    <!-- Основной контент -->    
+    <main>
+        <!-- Каталог -->
+        <section id="catalog">
+            <h2>Каталог изделий</h2>
+            
+            <!-- Ножи -->
+            <div class="category">
+                <h3>Ножи</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-id="1" data-price="6000">
+                        <img src="images/1737925439871.jpg" alt="Скрамасакс" width="200" height="200">
+                        <h4>Скрамасакс из Пскова 10 век</h4>
+                        <p>Кованый клинок 65г, рукоять ясень и латунь</p>
+                        <span>6 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-id="2" data-price="3000">
+                        <img src="images/1736418936706.jpg" alt="Нож бытовой" width="200" height="200">
+                        <h4>Нож бытовой, Новгород 11 век</h4>
+                        <p>Кованый клинок 65г, рукоять дуб, обмотка медной проволокой</p>
+                        <span>3 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-id="3" data-price="7000">
+                        <img src="images/IMG_20231106_185618.jpg" alt="Нож бытовой 1" width="200" height="200">
+                        <h4>Нож бытовой, раннее средневековье</h4>
+                        <p>Кованый клинок: лезвие 9хф, обкладки дамаск, рукоять береза, латунь</p>
+                        <span>7 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>                    
+                </div>
+            </div>
+            
+            <!-- Топоры -->
+            <div class="category">
+                <h3>Топоры</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-id="4" data-price="5000">
+                        <img src="images/1727942862411.jpg" alt="Топор из Новгорода" width="200" height="200">
+                        <h4>Топор из Новгорода 10 век</h4>
+                        <p>Сталь 65г, рукоять береза и кожа</p>
+                        <span>5 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-id="5" data-price="5000">
+                        <img src="images/IMG_20240503_185129.jpg" alt="Топор рабочий" width="200" height="200">
+                        <h4>Топор рабочий</h4>
+                        <p>Сталь 65г, рукоять береза</p>
+                        <span>5 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>                    
+                </div>
+            </div>
+            
+            <!-- Копья -->
+            <div class="category">
+                <h3>Копья</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-id="6" data-price="18700">
+                        <img src="images/IMG_20240228_230707.jpg" alt="Копье тип 3" width="200" height="200">
+                        <h4>Копье тип 3</h4>
+                        <p>Дамаскированный сердечник, лезвие 65г,</p>
+                        <span>18 700 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Посуда -->
+            <div class="category">
+                <h3>Кованая посуда</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-id="7" data-price="8900">
+                        <img src="images/1749234029.jpg" alt="Котел 3л, клепаный" width="200" height="200">
+                        <h4>Котел 3л, клепаный</h4>
+                        <p>Ручная ковка</p>
+                        <span>8 900 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-id="8" data-price="6000">
+                        <img src="images/600x0_wfvrfsrxpgujagfe_jpg_7222.jpg" alt="Столовый набор" width="200" height="200">
+                        <h4>Столовый набор</h4>
+                        <p>Ручная ковка, ложка, вилка, нож</p>
+                        <span>6 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Шлемы -->
+            <div class="category">
+                <h3>Шлемы</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-id="9" data-price="22000">
+                        <img src="images/IMG_20240831_205601_256.jpg" alt="Шлем из Гнездово тип 1" width="200" height="200">
+                        <h4>Шлем из Гнездово тип 1</h4>
+                        <p>Реконструкция, ст3 2мм, кожаные подбородочные ремни </p>
+                        <span>22 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-id="10" data-price="8000">
+                        <img src="images/x_210f6e63.jpg" alt="Шлем норманка" width="200" height="200">
+                        <h4>Шлем норманка</h4>
+                        <p>ст3 2мм, кожаные подбородочные ремни </p>
+                        <span>8 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>                    
+                </div>
+            </div>
+            
+            <!-- Костровые принадлежности -->
+            <div class="category">
+                <h3>Костровые принадлежности</h3>
+                <div class="product-grid">
+                    <div class="product-card" data-id="11" data-price="8000">
+                        <img src="images/1749234101.jpg" alt="Кованая тренога для костра" width="200" height="200">
+                        <h4>Кованая тренога для костра"</h4>
+                        <p>Кованая тренога и родвес для котла</p>
+                        <span>8 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-card" data-id="12" data-price="8000">
+                        <img src="images/import_files_27030.jpg" alt="Поддон для костра" width="200" height="200">
+                        <h4>Поддон для костра"</h4>
+                        <p>ст3, 2мм, диаметр 80см</p>
+                        <span>8 000 ₽</span>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+        <!-- О мастерской -->
+        <section id="about">
+            <h2>О нашей мастерской</h2>
+            <div>
+                <img src="images/1749236874207.jpg" alt="Мастерская" width="400" height="300">
+                <div>
+                    <p></p>
+                    <p>Мы сочетаем многовековые традиции кузнечного дела с современными технологиями обработки металла.</p>
+                    <p>Все изделия изготавливаются вручную с гарантией качества.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section id="reviews" class="reviews">
+            <h2>Отзывы наших покупателей</h2>
+            <div class="review">
+                <h4>Александр</h4>
+                <p>Отличный скрамасакс! Качество ковки на высоте, рукоять удобно лежит в руке. Доставили быстро.</p>
+                <div class="rating">★★★★★</div>
+            </div>
+            <div class="review">
+                <h4>Екатерина</h4>
+                <p>Заказывали котелок для походов - служит уже третий сезон без нареканий. Тренога тоже отличная.</p>
+                <div class="rating">★★★★☆</div>
+            </div>
+            <form id="review-form">
+                <h3>Оставить отзыв</h3>
+                <input type="text" placeholder="Ваше имя" required>
+                <textarea placeholder="Ваш отзыв" required></textarea>
+                <select id="rating">
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                </select>
+                <button type="submit">Отправить отзыв</button>
+            </form>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <div>
+                <div>
+                    <p>Адрес: </p>
+                    <p>Телефон:</p>
+                    <p>Email:</p>
+                    
+                </div>
+                <div>
+                    <form>
+                        <h3>Оставить заявку</h3>
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" placeholder="Телефон" required>
+                        <textarea placeholder="Сообщение"></textarea>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>        
+
+    <!-- Подвал -->
+    <footer>
+        <div>
+            <a href="/">Стальной Век</a>
+            <p>Кованые изделия ручной работы</p>
+        </div>
+        <div>
+            <p>&copy; Мастерская "Стальной Век"</p>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <button type="button" class="close-modal">×</button>
+            <h2>Ваша корзина</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Товары будут добавляться динамически -->
+            </div>
+            <div class="cart-total">
+                <p>Итого: <span id="cart-total">0</span> ₽</p>
+                <button id="checkout-button">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Форма заказа -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <button type="button" class="close-modal">×</button>
+            <h2>Оформление заказа</h2>
+            <form>
+                <input type="text" placeholder="ФИО" required>
+                <input type="tel" placeholder="Телефон" required>
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Комментарий к заказу"></textarea>
+                <button type="submit">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Работа корзины
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = {
+                items: [],
+                total: 0,
+                
+                addItem: function(productId, productName, price) {
+                    const existingItem = this.items.find(item => item.id === productId);
+                    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        this.items.push({
+                            id: productId,
+                            name: productName,
+                            price: price,
+                            quantity: 1
+                        });
+                    }
+                    
+                    this.updateTotal();
+                    this.updateCartCount();
+                    this.renderCartItems();
+                },
+                
+                updateTotal: function() {
+                    this.total = this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                    document.getElementById('cart-total').textContent = this.total;
+                },
+                
+                updateCartCount: function() {
+                    const count = this.items.reduce((sum, item) => sum + item.quantity, 0);
+                    document.getElementById('cart-count').textContent = count;
+                },
+                
+                renderCartItems: function() {
+                    const cartItemsElement = document.getElementById('cart-items');
+                    cartItemsElement.innerHTML = '';
+                    
+                    if (this.items.length === 0) {
+                        cartItemsElement.innerHTML = '<p>Корзина пуста</p>';
+                        return;
+                    }
+                    
+                    this.items.forEach(item => {
+                        const itemElement = document.createElement('div');
+                        itemElement.className = 'cart-item';
+                        itemElement.innerHTML = `
+                            <h4>${item.name}</h4>
+                            <p>${item.price} ₽ × ${item.quantity} = ${item.price * item.quantity} ₽</p>
+                            <button class="remove-item" data-id="${item.id}">Удалить</button>
+                        `;
+                        cartItemsElement.appendChild(itemElement);
+                    });
+                }
+            };
+            
+            // Добавление товаров в корзину
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productCard = this.closest('.product-card');
+                    const productId = productCard.dataset.id;
+                    const productName = productCard.querySelector('h4').textContent;
+                    const price = parseInt(productCard.dataset.price);
+                    
+                    cart.addItem(productId, productName, price);
+                    
+                    // Анимация добавления
+                    this.textContent = 'Добавлено!';
+                    setTimeout(() => {
+                        this.textContent = 'В корзину';
+                    }, 1000);
+                });
+            });
+            
+            // Удаление товаров из корзины
+            document.getElementById('cart-items').addEventListener('click', function(e) {
+                if (e.target.classList.contains('remove-item')) {
+                    const productId = e.target.dataset.id;
+                    cart.items = cart.items.filter(item => item.id !== productId);
+                    cart.updateTotal();
+                    cart.updateCartCount();
+                    cart.renderCartItems();
+                }
+            });
+            
+            // Открытие/закрытие модальных окон
+            const cartButton = document.getElementById('cart-button');
+            const cartModal = document.getElementById('cart-modal');
+            const orderModal = document.getElementById('order-modal');
+            const closeButtons = document.querySelectorAll('.close-modal');
+            
+            cartButton.addEventListener('click', function() {
+                cartModal.style.display = 'block';
+            });
+            
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target.classList.contains('modal')) {
+                    e.target.style.display = 'none';
+                }
+            });
+            
+            // Оформление заказа
+            document.getElementById('checkout-button').addEventListener('click', function() {
+                cartModal.style.display = 'none';
+                orderModal.style.display = 'block';
+            });
+            
+            // Отправка отзыва
+            document.getElementById('review-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = this.querySelector('input[type="text"]').value;
+                const text = this.querySelector('textarea').value;
+                const rating = this.querySelector('#rating').value;
+                
+                const reviewsContainer = document.getElementById('reviews');
+                const newReview = document.createElement('div');
+                newReview.className = 'review';
+                newReview.innerHTML = `
+                    <h4>${name}</h4>
+                    <p>${text}</p>
+                    <div class="rating">${'★'.repeat(rating)}${'☆'.repeat(5-rating)}</div>
+                `;
+                
+                reviewsContainer.insertBefore(newReview, this);
+                this.reset();
+                alert('Спасибо за ваш отзыв!');
+            });
+            
+            // Поиск товаров
+            document.getElementById('search-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const searchTerm = document.getElementById('search-input').value.toLowerCase();
+                const products = document.querySelectorAll('.product-card');
+                
+                products.forEach(product => {
+                    const productName = product.querySelector('h4').textContent.toLowerCase();
+                    if (productName.includes(searchTerm)) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
